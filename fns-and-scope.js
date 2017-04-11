@@ -4,7 +4,16 @@ var name = 'Tyler';
 //Create a function called isTyler that accepts name as it's only parameter.
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
+
   //Code Here
+  function isTyler(name){
+    if (name === 'Tyler'){
+    return true;
+  }
+  else{
+    return false;
+   }
+  }
 
 //////////////////PROBLEM 2////////////////////
 
@@ -13,6 +22,10 @@ var name = 'Tyler';
 
 
   //Code Here
+  function getName(){
+  name1= prompt('Your Name');
+    return name1;
+  }
 
 
 //////////////////PROBLEM 3////////////////////
@@ -23,8 +36,12 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
-
-
+function welcome(){
+  getName();
+  var name1 =getName();
+  alert("Welcome, "+name1);
+}
+welcome();
 //////////////////PROBLEM 4////////////////////
 
 
@@ -33,7 +50,7 @@ var name = 'Tyler';
 //What is the difference between arguments and parameters?
 
   //Answer Here
-
+  //parameters are entered into a function while arguments are statements that allow you to accomplish the task.
 
 //////////////////PROBLEM 5////////////////////
 
@@ -43,7 +60,12 @@ var name = 'Tyler';
 
 
   //Answer Here
-
+//Undefined
+//Null
+//Nan
+//false
+//0
+// '' - empty string
 
 
 //////////////////PROBLEM 6////////////////////
@@ -53,15 +75,21 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+function myName(str){
+str = name;
+return str;
+}
+//myName(getName())
+
+
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-
+var newMyName = myName;
 //Now alert the result of invoking newMyName
-
+alert(newMyName());
 
 
 //////////////////PROBLEM 7////////////////////
@@ -71,8 +99,13 @@ var name = 'Tyler';
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
+function outerFn(){
+return function(){
+  return name;};
+}
 
 //Now save the result of invoking outerFn into a variable called innerFn.
+var innerFn = outerFn();
 
   //Code Here
 
