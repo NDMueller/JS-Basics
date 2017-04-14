@@ -4,28 +4,26 @@ var name = 'Tyler';
 //Create a function called isTyler that accepts name as it's only parameter.
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
-
-  //Code Here
-  function isTyler(name){
-    if (name === 'Tyler'){
+//  Code Here
+function isTyler(name){
+  if (name === 'Tyler'){
     return true;
   }
   else{
     return false;
-   }
   }
+}
 
 //////////////////PROBLEM 2////////////////////
 
 
 //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
 
-
   //Code Here
-  function getName(){
-  name1= prompt('Your Name');
-    return name1;
-  }
+function getName(){
+  name1 = prompt('Your name');
+  return name1;
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -37,11 +35,12 @@ var name = 'Tyler';
 
   //Code Here
 function welcome(){
-  getName();
-  var name1 =getName();
+  var name1 = getName();
   alert("Welcome, "+name1);
 }
-welcome();
+//welcome();
+
+
 //////////////////PROBLEM 4////////////////////
 
 
@@ -50,7 +49,8 @@ welcome();
 //What is the difference between arguments and parameters?
 
   //Answer Here
-  //parameters are entered into a function while arguments are statements that allow you to accomplish the task.
+
+// Parameters are enter into a function while argument are statmnets that allow you to accomlish tasks.
 
 //////////////////PROBLEM 5////////////////////
 
@@ -60,12 +60,8 @@ welcome();
 
 
   //Answer Here
-//Undefined
-//Null
-//Nan
-//false
-//0
-// '' - empty string
+
+// undefined, null, false, 0, NaN, ""
 
 
 //////////////////PROBLEM 6////////////////////
@@ -76,19 +72,16 @@ welcome();
 
   //Code Here
 function myName(str){
-str = name;
-return str;
+  str = name;
+  return str;
 }
-//myName(getName())
-
-
-
-
+//myName(getName());
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
 var newMyName = myName;
 //Now alert the result of invoking newMyName
+
 alert(newMyName());
 
 
@@ -100,13 +93,14 @@ alert(newMyName());
 
   //Code Here
 function outerFn(){
-return function(){
-  return name;};
+  return function(){
+    return name;};
 }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
-var innerFn = outerFn();
 
   //Code Here
+var innerFn = outerFn();
+
 
 //Now invoke innerFn.
